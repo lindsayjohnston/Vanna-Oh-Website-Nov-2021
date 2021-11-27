@@ -1,11 +1,11 @@
-import styles from './MainBodyMobile.css';
+import './MainBodyMobile.css';
 
 const mainBodyMobile = (props) => {
     //function go here
 
     return (
-        <div className="mainMobileBody">
-            this is the Mobile body
+        <div className="mainBody">
+            
         </div>
 
     )

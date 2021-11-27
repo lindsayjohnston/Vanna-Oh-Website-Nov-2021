@@ -6,8 +6,8 @@ import MainBodyMobile from './modules/mobile/MainBodyMobile/MainBodyMobile';
 function App() {
   return (
     <div className="App">
-      <MainBodyDesktop />
-      <MainBodyMobile />
+      <MainBodyDesktop display= "false" />
+      <MainBodyMobile screen= "mobile" />
 
 
     </div>
