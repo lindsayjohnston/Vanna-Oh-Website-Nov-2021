@@ -3,15 +3,9 @@ import './MainBodyDesktop.css';
 
 
 const mainBodyDesktop = (props) => {
-    let bodyClasses= "mainDesktopBody";
-    //function go here
-    
-    if (props.display !== true){
-        bodyClasses += " hidden";
-    }
     
     return (
-        <div className={bodyClasses}>
+        <div className="mainDesktopBody">
             <p> this is the desktop body </p>
         </div>
 
