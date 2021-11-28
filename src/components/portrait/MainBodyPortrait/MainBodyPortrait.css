@@ -7,4 +7,8 @@
     width: calc(100vw - 5vh);
 }
 
-
+@media only screen and (max-width: 500px){
+    .mainBodyPortrait{
+        background-image: url("../../../media/sad-mode-art-mobile-488x947.jpg");
+    }
+}
