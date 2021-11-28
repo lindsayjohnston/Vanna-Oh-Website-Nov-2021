@@ -38,6 +38,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <div className="titleContainerPortrait">
+          <h1 className="titlePortrait"> vanna oh! </h1>
+        </div>
         {appBody}
       </div>
 

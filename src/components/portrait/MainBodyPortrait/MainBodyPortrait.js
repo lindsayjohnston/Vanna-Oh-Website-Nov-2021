@@ -4,6 +4,7 @@ const mainBodyPortrait = (props) => {
 
     return (
         <div className="mainBodyPortrait">
+          
         </div>
     )
 }
