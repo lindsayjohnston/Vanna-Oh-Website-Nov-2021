@@ -1,0 +1,15 @@
+.menuPortrait{
+    background-color: salmon;
+    position: absolute;
+    bottom: 2vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
