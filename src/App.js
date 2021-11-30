@@ -11,8 +11,9 @@ class App extends React.Component {
     screenOrientation: window.screen.orientation.type,
     pages:  [ 
       {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
-      {id: 2, title: "music", content: "music -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
-      
+      {id: 2, title: "music", content: "MUSIC-Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
+      {id: 3, title: "merch", content: "LINK LINK LINK" },
+      {id: 4, title: "connect", content: "LINK LINK LINK" },
     ] 
   }
 
