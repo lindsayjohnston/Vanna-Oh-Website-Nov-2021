@@ -21,7 +21,7 @@ h1{
 button {
   display: inline-block;
   border: none;
-  padding: .5rem;
+  padding: .25rem;
   margin: 0;
   text-decoration: none;
   background: var(--dark-color);

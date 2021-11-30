@@ -5,7 +5,7 @@ const mainBodyPortrait = (props) => {
 
     return (
         <div className="mainBodyPortrait">
-          <MenuPortrait />
+          <MenuPortrait pages={props.pages}/>
         </div>
     )
 }

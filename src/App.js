@@ -9,6 +9,11 @@ class App extends React.Component {
 
   state = {
     screenOrientation: window.screen.orientation.type,
+    pages:  [ 
+      {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
+      {id: 2, title: "music", content: "music -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
+      
+    ] 
   }
 
   constructor(props) {
@@ -33,7 +38,7 @@ class App extends React.Component {
     if (this.state.screenOrientation === "landscape-primary" || this.state.screenOrientation === "landscape-secondary") {
       appBody = <MainBodyLandscape />
     } else {
-      appBody = <MainBodyPortrait />
+      appBody = <MainBodyPortrait pages={this.state.pages}/>
     }
 
     return (
