@@ -8,6 +8,8 @@ const screen = window.screen;
 class App extends React.Component {
 
   state = {
+    screenHeight: window.screen.height,
+    screenWidth: window.screen.width,
     screenOrientation: window.screen.orientation.type,
     pages:  [ 
       {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
@@ -33,7 +35,6 @@ class App extends React.Component {
   }
 
   render() {
-
     let appBody = null;
 
     if (this.state.screenOrientation === "landscape-primary" || this.state.screenOrientation === "landscape-secondary") {
