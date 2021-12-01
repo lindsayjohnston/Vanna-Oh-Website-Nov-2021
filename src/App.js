@@ -36,21 +36,20 @@ class App extends React.Component {
 
   render() {
     let appBody = null;
-
+    let appClasses= "";
+ 
     if (this.state.screenOrientation === "landscape-primary" || this.state.screenOrientation === "landscape-secondary") {
-      appBody = <MainBodyLandscape />
+      appBody = <MainBodyLandscape />;
+      appClasses= "appLandscape";
     } else {
-      appBody = <MainBodyPortrait pages={this.state.pages}/>
+      appBody = <MainBodyPortrait pages={this.state.pages}/>;
+      appClasses= "appPortrait";
     }
 
     return (
-      <div className="App">
-        <div className="titleContainerPortrait">
-          <h1 className="titlePortrait"> vanna oh! </h1>
-        </div>
+      <div className={appClasses}>
         {appBody}
       </div>
-
     )
   }
 }

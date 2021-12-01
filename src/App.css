@@ -1,25 +1,27 @@
-.App {
-  /* background-color: green; */
-  height: 100vh;
+.appLandscape {
+  background-color: green;
+  height: 85vh;
+  padding: 10vh 5vh 5vh 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 400px;
 }
 
-.titleContainerPortrait{
-  height: 5vh;
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  display: flex;
-  align-items: center;
+.appPortrait{
+  background-color: coral;
 }
 
+@media only screen and (max-height: 500px ){
+  .appLandscape{
+      /* height: fit-content; */
+      padding: 50px 25px 25px 25px;
+      background-color: blueviolet;
+  }
 
-
-@media only screen and (max-height: 800px){
-    .titlePortrait{
-      font-size: 1.5em ;
-    }
+  .appPortrait{
+    background-color: pink;
+  
+  }
 }
