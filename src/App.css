@@ -1,27 +1,23 @@
 .appLandscape {
-  background-color: green;
+  /* background-color: green; */
   height: 85vh;
   padding: 10vh 5vh 5vh 5vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   position: relative;
   min-height: 400px;
 }
 
 .appPortrait{
-  background-color: coral;
+  /* background-color: coral; */
+  height: 90vh;
+  padding: 5vh 5vw 5vh 5vw;
 }
 
 @media only screen and (max-height: 500px ){
   .appLandscape{
-      /* height: fit-content; */
       padding: 50px 25px 25px 25px;
-      background-color: blueviolet;
-  }
-
-  .appPortrait{
-    background-color: pink;
-  
+      /* background-color: blueviolet; */
   }
 }
