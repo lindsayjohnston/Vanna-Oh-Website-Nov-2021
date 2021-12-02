@@ -31,11 +31,24 @@
 @media only screen and (max-height: 500px ){
     .mainBodyLandscape{
         height: 100%;
-        /* background-color: yellow; */
     }
     .titleContainerLandscape{
         font-size: .65rem;
         top: -25px;
+    }
+
+    .albumCover{
+        max-height: 300px;
+        width: unset;
+    }
+}
+
+/* Galaxy fold landscape */
+
+@media only screen and (max-height: 300px), screen and (max-width: 650px ){
+    .albumCover{
+        max-height: 200px;
+        width: unset;
     }
 }
 

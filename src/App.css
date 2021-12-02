@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center; 
   position: relative;
-  min-height: 400px;
+  min-height: 250px;
 }
 
 .appPortrait{
@@ -17,7 +17,15 @@
 
 @media only screen and (max-height: 500px ){
   .appLandscape{
-      padding: 50px 25px 25px 25px;
+      padding: 40px 20px 20px 20px;
       /* background-color: blueviolet; */
+  }
+}
+
+/* Galaxy fold landscape */
+
+@media only screen and (max-height: 300px), screen and (max-width: 650px ){
+  .appLandscape{
+    padding: 25px 10px 10px 10px;  
   }
 }
