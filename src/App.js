@@ -3,14 +3,20 @@ import './App.css';
 import MainBodyLandscape from "./components/landscape/MainBodyLandscape/MainBodyLandscape.js";
 import MainBodyPortrait from './components/portrait/MainBodyPortrait/MainBodyPortrait';
 
-const screen = window.screen;
+let screenOrientation= null;
+
+if(window.visualViewport.height > window.visualViewport.width){
+  screenOrientation= "portrait";
+} else {
+  screenOrientation= "landscape";
+}
 
 class App extends React.Component {
-
+  
   state = {
-    screenHeight: window.screen.height,
-    screenWidth: window.screen.width,
-    screenOrientation: window.screen.orientation.type,
+    screenHeight: window.visualViewport.height,
+    screenWidth: window.visualViewport.width,
+    screenOrientation: screenOrientation,
     pages:  [ 
       {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
       {id: 2, title: "music", content: "MUSIC-Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
@@ -21,24 +27,44 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+    this.checkScreenOrientation = this.checkScreenOrientation.bind(this);
     this.setScreenOrientation = this.setScreenOrientation.bind(this);
   }
 
-  setScreenOrientation = () => {
+  checkScreenOrientation = () => {
+    let newOrientation= null;
+
+    if(window.visualViewport.height > window.visualViewport.width){
+      newOrientation= "portrait";
+    } else {
+      newOrientation= "landscape";
+    }
+
+    if(newOrientation !== this.state.screenOrientation){
+      this.setScreenOrientation(newOrientation);
+    }else {
+      console.log ("orientation not changed");
+    }
+  }
+
+  setScreenOrientation= (newOrientation)=>{
     this.setState({
-      screenOrientation: window.screen.orientation.type
+      screenHeight: window.visualViewport.height,
+      screenWidth: window.visualViewport.width,
+      screenOrientation: newOrientation
     })
   }
 
   componentDidMount() {
-    screen.orientation.addEventListener("change", this.setScreenOrientation);
+    window.addEventListener('resize', this.checkScreenOrientation)
   }
 
   render() {
     let appBody = null;
     let appClasses= "";
  
-    if (this.state.screenOrientation === "landscape-primary" || this.state.screenOrientation === "landscape-secondary") {
+
+    if (this.state.screenOrientation === "landscape") {
       appBody = <MainBodyLandscape />;
       appClasses= "appLandscape";
     } else {

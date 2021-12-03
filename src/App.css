@@ -15,17 +15,25 @@
   padding: 5vh 5vw 5vh 5vw;
 }
 
-@media only screen and (max-height: 500px ){
+
+/* @media only screen and (max-height: 500px){
   .appLandscape{
       padding: 40px 20px 20px 20px;
-      /* background-color: blueviolet; */
+      min-height: 300px;
   }
-}
+} */
 
-/* Galaxy fold landscape */
 
-@media only screen and (max-height: 300px), screen and (max-width: 650px ){
+
+/* small mobile landscape */
+
+@media only screen and (max-height: 300px), screen and (max-width: 700px ){
   .appLandscape{
-    padding: 25px 10px 10px 10px;  
+    min-height: 200px;
+    height: calc(100vh - 35px);
+    padding: 25px 10px 10px 10px;
+    background-color: pink;  
   }
 }
+
+

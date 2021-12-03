@@ -29,9 +29,9 @@
 }
 
 @media only screen and (max-height: 500px ){
-    .mainBodyLandscape{
+    /* .mainBodyLandscape{
         height: 100%;
-    }
+    } */
     .titleContainerLandscape{
         font-size: .65rem;
         top: -25px;
@@ -43,14 +43,21 @@
     }
 }
 
-/* Galaxy fold landscape */
-
-@media only screen and (max-height: 300px), screen and (max-width: 650px ){
+@media only screen and (max-height:400px){
     .albumCover{
         max-height: 200px;
-        width: unset;
     }
 }
 
 
+
+
+/* Galaxy fold landscape */
+
+@media only screen and (max-height: 300px), screen and (max-width: 700px ){
+    .albumCover{
+        max-height: 200px;
+        width: unset;
+    }
+  }
 
