@@ -2,6 +2,9 @@ import './MainBodyPortrait.css';
 import MenuPortrait from '../MenuPortrait/MenuPortrait';
 
 const mainBodyPortrait = (props) => {
+//assign classes for 4:3 ratio for tablet 
+//16:9 ratio for mobile
+
 
     return (
       <div className="mainBodyPortrait">

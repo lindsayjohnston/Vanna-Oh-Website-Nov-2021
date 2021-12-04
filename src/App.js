@@ -2,20 +2,26 @@ import React from 'react';
 import './App.css';
 import MainBodyLandscape from "./components/landscape/MainBodyLandscape/MainBodyLandscape.js";
 import MainBodyPortrait from './components/portrait/MainBodyPortrait/MainBodyPortrait';
+import MainBodySquare from './components/square/MainBodySquare/MainBodySquare';
 
 let screenOrientation= null;
 
-if(window.visualViewport.height > window.visualViewport.width){
+ //Add in ratios height/width
+    //landscape= < .87
+    //square = between
+    //Portrait= > 1.06
+
+if((window.visualViewport.height / window.visualViewport.width) < .87){
+  screenOrientation= "landscape";
+} else if ((window.visualViewport.height / window.visualViewport.width) > 1.6) {
   screenOrientation= "portrait";
 } else {
-  screenOrientation= "landscape";
+  screenOrientation= "square";
 }
 
 class App extends React.Component {
   
   state = {
-    screenHeight: window.visualViewport.height,
-    screenWidth: window.visualViewport.width,
     screenOrientation: screenOrientation,
     pages:  [ 
       {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
@@ -34,23 +40,21 @@ class App extends React.Component {
   checkScreenOrientation = () => {
     let newOrientation= null;
 
-    if(window.visualViewport.height > window.visualViewport.width){
+    if((window.visualViewport.height / window.visualViewport.width) < .87){
+      newOrientation= "landscape";
+    } else if ((window.visualViewport.height / window.visualViewport.width) > 1.2) {
       newOrientation= "portrait";
     } else {
-      newOrientation= "landscape";
+      newOrientation= "square";
     }
 
     if(newOrientation !== this.state.screenOrientation){
       this.setScreenOrientation(newOrientation);
-    }else {
-      console.log ("orientation not changed");
     }
   }
 
   setScreenOrientation= (newOrientation)=>{
     this.setState({
-      screenHeight: window.visualViewport.height,
-      screenWidth: window.visualViewport.width,
       screenOrientation: newOrientation
     })
   }
@@ -63,13 +67,15 @@ class App extends React.Component {
     let appBody = null;
     let appClasses= "";
  
-
     if (this.state.screenOrientation === "landscape") {
       appBody = <MainBodyLandscape />;
       appClasses= "appLandscape";
-    } else {
+    } else if (this.state.screenOrientation === "portrait"){
       appBody = <MainBodyPortrait pages={this.state.pages}/>;
       appClasses= "appPortrait";
+    } else {
+      appBody= <MainBodySquare pages = {this.state.pages}/>;
+      appClasses="appSquare";
     }
 
     return (

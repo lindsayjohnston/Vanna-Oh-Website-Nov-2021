@@ -1,0 +1,39 @@
+.menuSquare{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.buttonSquare {
+    display: inline-block;
+    opacity: 70%;
+    border: none;
+    margin: .5vh;
+    text-decoration: none;
+    background: var(--dark-color);
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 3vh;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  .buttonSquare:hover,
+  .buttonSquare:focus {
+    background: var(--main-color);
+    color: var(--dark-color)
+  }
+  
+  .buttonSquare:focus {
+    outline: 1px solid --light-color;
+    outline-offset: -4px;
+  }
+  
+  .buttonSquare:active {
+    transform: scale(0.99);
+  }
