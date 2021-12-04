@@ -16,7 +16,9 @@ body {
 
 h1{
   margin: 0px;
+  font-size: unset;
 }
+
 
 @media only screen and (max-height: 800px){
   /* button{

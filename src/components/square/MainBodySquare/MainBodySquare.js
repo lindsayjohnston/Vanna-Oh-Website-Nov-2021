@@ -7,7 +7,7 @@ const mainBodySquare = (props) => {
     return (
         <div className='mainBodySquare'>
             <div className="titleContainerSquare">
-                <h1 className="titleSquare"> vanna oh! </h1>
+                {/* <h1 className="titleSquare"> vanna oh! </h1> */}
             </div>
             <img src={albumCover} className="albumCoverSquare" alt="sad-mode-album-cover"></img>
             <MenuSquare pages={props.pages} />

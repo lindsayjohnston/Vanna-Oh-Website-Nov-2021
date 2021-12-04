@@ -69,7 +69,7 @@ class App extends React.Component {
     const screenRatio= window.visualViewport.height/window.visualViewport.width;
  
     if (this.state.screenOrientation === "landscape") {
-      appBody = <MainBodyLandscape />;
+      appBody = <MainBodyLandscape pages={this.state.pages} />;
       appClasses= "appLandscape";
     } else if (this.state.screenOrientation === "portrait"){
       appBody = <MainBodyPortrait 
