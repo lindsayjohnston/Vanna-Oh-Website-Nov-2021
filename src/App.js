@@ -9,7 +9,7 @@ let screenOrientation= null;
  //Add in ratios height/width
     //landscape= < .87
     //square = between
-    //Portrait= > 1.06
+    //Portrait= > 1.6
 
 if((window.visualViewport.height / window.visualViewport.width) < .87){
   screenOrientation= "landscape";
@@ -66,17 +66,22 @@ class App extends React.Component {
   render() {
     let appBody = null;
     let appClasses= "";
+    const screenRatio= window.visualViewport.height/window.visualViewport.width;
  
     if (this.state.screenOrientation === "landscape") {
       appBody = <MainBodyLandscape />;
       appClasses= "appLandscape";
     } else if (this.state.screenOrientation === "portrait"){
-      appBody = <MainBodyPortrait pages={this.state.pages}/>;
+      appBody = <MainBodyPortrait 
+                    pages={this.state.pages}
+                    screenRatio={screenRatio}
+                />;
       appClasses= "appPortrait";
     } else {
       appBody= <MainBodySquare pages = {this.state.pages}/>;
       appClasses="appSquare";
     }
+
 
     return (
       <div className={appClasses}>

@@ -11,10 +11,10 @@
 }
 
 .appPortrait{
-  background-color: coral;
+  /* background-color: coral; */
   height: 90vh;
   padding: 5vh 5vw;
-  min-width: 260px;
+  min-width: 240px;
 }
 
 .appSquare{
@@ -26,15 +26,6 @@
 
 
 
-/* small mobile landscape */
 
-@media only screen and (max-height: 300px), screen and (max-width: 700px ){
-  .appLandscape{
-    min-height: 200px;
-    height: calc(100vh - 35px);
-    padding: 25px 10px 10px 10px;
-    background-color: pink;  
-  }
-}
 
 
