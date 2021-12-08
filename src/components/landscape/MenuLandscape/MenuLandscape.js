@@ -15,6 +15,7 @@ const menuLandscape = (props) =>{
         </button>
     );
     } else {
+        //generate one disabled 'button' for the "pageShown"
         let pageInfo= props.pages[(pageShown - 1)];
         pagesButtons = <button 
         disabled
@@ -24,13 +25,6 @@ const menuLandscape = (props) =>{
         onClick={() => props.menuClick({pageShown})}>
         {pageInfo.title}
     </button>
-    }
-    
-
-    
-    function flipCardHandler(id, pageInfoArray){
-        alert( id + " clicked");
-        
     }
     
 
