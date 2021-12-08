@@ -22,6 +22,7 @@ if((window.visualViewport.height / window.visualViewport.width) < .87){
 class App extends React.Component {
   
   state = {
+    pageShown:"home",
     screenOrientation: screenOrientation,
     pages:  [ 
       {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
@@ -35,6 +36,7 @@ class App extends React.Component {
     super(props);
     this.checkScreenOrientation = this.checkScreenOrientation.bind(this);
     this.setScreenOrientation = this.setScreenOrientation.bind(this);
+    this.pageShownHandler.bind(this);
   }
 
   checkScreenOrientation = () => {
@@ -59,26 +61,49 @@ class App extends React.Component {
     })
   }
 
+  pageShownHandler = (pageId) =>{
+    // alert("fired pageShownHandler in App.js. Id: " + pageId)
+    this.setState ({
+      pageShown : pageId
+    })
+  }
+
+  backButtonHandler = () =>{
+    this.setState({
+      pageShown: "home"
+    })
+  }
+
   componentDidMount() {
     window.addEventListener('resize', this.checkScreenOrientation)
   }
 
   render() {
+    
     let appBody = null;
     let appClasses= "";
     const screenRatio= window.visualViewport.height/window.visualViewport.width;
  
     if (this.state.screenOrientation === "landscape") {
-      appBody = <MainBodyLandscape pages={this.state.pages} />;
+      appBody = <MainBodyLandscape 
+                  backButtonHandler= {this.backButtonHandler}
+                  menuClick = {this.pageShownHandler}
+                  pageShown= {this.state.pageShown} pages={this.state.pages} />;
       appClasses= "appLandscape";
     } else if (this.state.screenOrientation === "portrait"){
       appBody = <MainBodyPortrait 
                     pages={this.state.pages}
+                    // menuClick = {this.pageShownHandler}
+                    pageShown= {this.state.pageShown} 
                     screenRatio={screenRatio}
                 />;
       appClasses= "appPortrait";
     } else {
-      appBody= <MainBodySquare pages = {this.state.pages}/>;
+      appBody= <MainBodySquare 
+                    pages = {this.state.pages}
+                    // menuClick = {this.pageShownHandler}
+                    pageShown= {this.state.pageShown} 
+                    />;
       appClasses="appSquare";
     }
 
