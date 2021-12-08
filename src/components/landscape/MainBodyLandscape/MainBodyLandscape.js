@@ -3,12 +3,12 @@ import MenuLandscape from '../MenuLandscape/MenuLandscape';
 import albumCover from '../../../media/sad-mode-album-cover-1024x1024.jpg'
 
 const mainBodyLandscape = (props) => {
-    let imgContainerClasses= "imgContainer";
+    let imgContainerClasses= "imgContainer flipCard";
    
     let backButtonClasses= "titleLandscape backButton";
     if (props.pageShown === "home"){
         backButtonClasses += " hidden";
-        imgContainerClasses += " flipCard";
+        imgContainerClasses = "imgContainer";
     }
 
     
