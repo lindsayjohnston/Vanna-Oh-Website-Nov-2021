@@ -3,8 +3,21 @@ import './App.css';
 import MainBodyLandscape from "./components/landscape/MainBodyLandscape/MainBodyLandscape.js";
 import MainBodyPortrait from './components/portrait/MainBodyPortrait/MainBodyPortrait';
 import MainBodySquare from './components/square/MainBodySquare/MainBodySquare';
+import ringerShirtThumbnail from '../src/media/merchThumbnails/ringer-shirt-thumbnail.jpg';
+import blackShirtThumbnail from '../src/media/merchThumbnails/black-shirt-thumbnail.jpg';
+import undiesThumbnail from '../src/media/merchThumbnails/undies-thumbnail.jpg';
+import beanieThumbnail from '../src/media/merchThumbnails/crimson-beanie.jpg';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import{ faEnvelope } from '@fortawesome/free-regular-svg-icons';
+//fa email
+
+library.add(faFacebookSquare, faInstagram, faEnvelope);
 
 let screenOrientation= null;
+let contentOrientationClasses= null;
+
 
  //Add in ratios height/width
     //landscape= < .87
@@ -13,10 +26,13 @@ let screenOrientation= null;
 
 if((window.visualViewport.height / window.visualViewport.width) < .87){
   screenOrientation= "landscape";
+  contentOrientationClasses="contentLandscape";
 } else if ((window.visualViewport.height / window.visualViewport.width) > 1.6) {
   screenOrientation= "portrait";
+  contentOrientationClasses="contentPortrait";
 } else {
   screenOrientation= "square";
+  contentOrientationClasses="contentSquare";
 }
 
 class App extends React.Component {
@@ -27,7 +43,7 @@ class App extends React.Component {
     pages:  [ 
       {id: 1, 
       title: "about", 
-      content: <div>
+      content: <div className={contentOrientationClasses}>
         <p>
           Vanna Oh! stepped onto the Pacific North West music scene in 2019. In less than a year she released a rock-and-roll EP, debuted a music video featured on Seattle’s Video BeBop, and toured the West Coast. Vanna Oh! became known for her powerful guitar hooks, dynamic vocals, theatrical stage presence, and message of women’s empowerment.
         </p>
@@ -39,15 +55,42 @@ class App extends React.Component {
        },
       { id: 2, 
         title: "music", 
-        content: "this will be music video"
+        content: <div className={contentOrientationClasses}>
+             <iframe  src="https://www.youtube.com/embed/Hphz0jDpxGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       },
       { id: 3, 
         title: "merch", 
-        content: "this will be thumbnails of merch"
+        content: <div className={contentOrientationClasses}>
+          <div className="contentIcons4">
+            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/limited-edition-chaperone-ringer-tee">
+              <img src={ringerShirtThumbnail}></img>
+            </a>
+            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/black-vanna-oh-t-shirt">
+              <img src={blackShirtThumbnail}></img>
+            </a>
+            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/crimson-vota-beanie">
+              <img src={beanieThumbnail}></img>
+            </a>
+            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/vanna-oh-undies-small">
+              <img src={undiesThumbnail}></img>
+            </a>
+          </div>
+        </div>
       },
       { id: 4, 
         title: "connect", 
-        content: "this will be icons"},
+        content: <div className={contentOrientationClasses}>
+          <a href="https://www.facebook.com/vannaohmusic/" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'facebook-square']} size="3x" />
+          </a>
+          <a href="https://www.instagram.com/vannaohno/" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'instagram']} size="3x" />
+          </a>
+          <a href="mailto:vannaohcontact@gmail.com" target="_blank">
+            <FontAwesomeIcon icon={['far', 'envelope']} size="3x" />
+          </a>
+        </div>},
     ] 
   }
 

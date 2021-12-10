@@ -67,7 +67,9 @@
     background:white;
     color: var(--dark-color);
     transform: rotateY(180deg);
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .albumCover{

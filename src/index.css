@@ -5,6 +5,7 @@
   --dark-color: #343434;
   --main-color:  #EBEBEB;
   --light-color: #FFFFFF;
+  --accent-color: #5c5c5c;
 }
 
 body {
@@ -17,6 +18,18 @@ body {
 h1{
   margin: 0px;
   font-size: unset;
+}
+
+p{
+  margin-top: 0;
+}
+
+a{
+  color: var(--dark-color);
+}
+
+a:hover{
+  color: var(--accent-color);
 }
 
 
