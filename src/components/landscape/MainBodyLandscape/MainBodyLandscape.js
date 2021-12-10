@@ -1,14 +1,24 @@
 import './MainBodyLandscape.css';
 import MenuLandscape from '../MenuLandscape/MenuLandscape';
-import albumCover from '../../../media/sad-mode-album-cover-1024x1024.jpg'
+import albumCover from '../../../media/sad-mode-album-cover-1024x1024.jpg';
 
 const mainBodyLandscape = (props) => {
     let imgContainerClasses= "imgContainer flipCard";
-   
     let backButtonClasses= "titleLandscape backButton";
+    let contentOrLinks=null;
     if (props.pageShown === "home"){
         backButtonClasses += " hidden";
         imgContainerClasses = "imgContainer";
+    } else {
+        const pageIndex= props.pageShown - 1;
+        const pageInfo= props.pages[pageIndex];
+        if(pageInfo.content !== null){
+            contentOrLinks= pageInfo.content;
+        } else {
+            //stop the album from flipping
+            alert("dont flip the album")
+        }
+
     }
 
     
@@ -31,7 +41,7 @@ const mainBodyLandscape = (props) => {
                         <img className="albumCover" alt="sad-mode-album-cover" src={albumCover}></img>
                     </div>
                     <div className="back">
-                        THIS WILL BE THE BACK
+                        {contentOrLinks}
                     </div>
                     
                 </div>

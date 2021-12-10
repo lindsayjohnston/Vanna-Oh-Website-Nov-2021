@@ -25,10 +25,29 @@ class App extends React.Component {
     pageShown:"home",
     screenOrientation: screenOrientation,
     pages:  [ 
-      {id: 1, title: "about", content: "ABOUT -Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
-      {id: 2, title: "music", content: "MUSIC-Lorem Ipsum – Generator, Origins and Meaninghttps://loremipsum.io Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging ..." },
-      {id: 3, title: "merch", content: "LINK LINK LINK" },
-      {id: 4, title: "connect", content: "LINK LINK LINK" },
+      {id: 1, 
+      title: "about", 
+      content: <div>
+        <p>
+          Vanna Oh! stepped onto the Pacific North West music scene in 2019. In less than a year she released a rock-and-roll EP, debuted a music video featured on Seattle’s Video BeBop, and toured the West Coast. Vanna Oh! became known for her powerful guitar hooks, dynamic vocals, theatrical stage presence, and message of women’s empowerment.
+        </p>
+        <break></break>
+        <p>
+          The COVID pandemic cancelled the rock-and-roll queen’s second West Coast tour and brought the full-time performer to a halt. During this time, she wrote heart-wrenching folk songs, produced and engineered a 4-song EP, and filmed a music video in Texas. She also wrestled with the ethical dilemma of spending all of her time and money on such self-aggrandizing ventures—wondering if it was the best way to help a world reeling from income inequality, racism, mental illness, addiction, and misogyny.
+        </p>
+      </div>
+       },
+      { id: 2, 
+        title: "music", 
+        content: "this will be music video"
+      },
+      { id: 3, 
+        title: "merch", 
+        content: "this will be thumbnails of merch"
+      },
+      { id: 4, 
+        title: "connect", 
+        content: "this will be icons"},
     ] 
   }
 
