@@ -6,6 +6,7 @@ const mainBodyLandscape = (props) => {
     let imgContainerClasses= "imgContainer flipCard";
     let backButtonClasses= "titleLandscape backButton";
     let contentOrLinks=null;
+    
     if (props.pageShown === "home"){
         backButtonClasses += " hidden";
         imgContainerClasses = "imgContainer";

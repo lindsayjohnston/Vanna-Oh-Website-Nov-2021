@@ -63,17 +63,17 @@ class App extends React.Component {
         title: "merch", 
         content: <div className={contentOrientationClasses}>
           <div className="contentIcons4">
-            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/limited-edition-chaperone-ringer-tee">
-              <img src={ringerShirtThumbnail}></img>
+            <a target="_blank" rel="noreferrer" href="https://vannaoh.bandcamp.com/merch/limited-edition-chaperone-ringer-tee">
+              <img src={ringerShirtThumbnail} alt="ringer-shirt-thumbnail"></img>
             </a>
-            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/black-vanna-oh-t-shirt">
-              <img src={blackShirtThumbnail}></img>
+            <a target="_blank" rel="noreferrer" href="https://vannaoh.bandcamp.com/merch/black-vanna-oh-t-shirt">
+              <img src={blackShirtThumbnail} alt="black-shirt-thumbnail"></img>
             </a>
-            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/crimson-vota-beanie">
-              <img src={beanieThumbnail}></img>
+            <a target="_blank" rel="noreferrer" href="https://vannaoh.bandcamp.com/merch/crimson-vota-beanie">
+              <img src={beanieThumbnail} alt="beanie-thumbnail"></img>
             </a>
-            <a target="_blank" href="https://vannaoh.bandcamp.com/merch/vanna-oh-undies-small">
-              <img src={undiesThumbnail}></img>
+            <a target="_blank" rel="noreferrer" href="https://vannaoh.bandcamp.com/merch/vanna-oh-undies-small">
+              <img src={undiesThumbnail} alt="undies-thumbnail"></img>
             </a>
           </div>
         </div>
@@ -81,13 +81,13 @@ class App extends React.Component {
       { id: 4, 
         title: "connect", 
         content: <div className={contentOrientationClasses}>
-          <a href="https://www.facebook.com/vannaohmusic/" target="_blank">
+          <a href="https://www.facebook.com/vannaohmusic/" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={['fab', 'facebook-square']} size="3x" />
           </a>
-          <a href="https://www.instagram.com/vannaohno/" target="_blank">
+          <a href="https://www.instagram.com/vannaohno/" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={['fab', 'instagram']} size="3x" />
           </a>
-          <a href="mailto:vannaohcontact@gmail.com" target="_blank">
+          <a href="mailto:vannaohcontact@gmail.com" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={['far', 'envelope']} size="3x" />
           </a>
         </div>},
@@ -154,17 +154,16 @@ class App extends React.Component {
       appClasses= "appLandscape";
     } else if (this.state.screenOrientation === "portrait"){
       appBody = <MainBodyPortrait 
-                    pages={this.state.pages}
-                    // menuClick = {this.pageShownHandler}
-                    pageShown= {this.state.pageShown} 
-                    screenRatio={screenRatio}
+                  backButtonHandler= {this.backButtonHandler}
+                  menuClick = {this.pageShownHandler}
+                  pageShown= {this.state.pageShown} pages={this.state.pages}
                 />;
       appClasses= "appPortrait";
     } else {
       appBody= <MainBodySquare 
-                    pages = {this.state.pages}
-                    // menuClick = {this.pageShownHandler}
-                    pageShown= {this.state.pageShown} 
+                  backButtonHandler= {this.backButtonHandler}
+                  menuClick = {this.pageShownHandler}
+                  pageShown= {this.state.pageShown} pages={this.state.pages} 
                     />;
       appClasses="appSquare";
     }

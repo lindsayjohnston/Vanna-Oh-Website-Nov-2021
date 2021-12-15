@@ -9,16 +9,72 @@
     align-items: center;
 }
 
-.titleSquare {
-    position: absolute;
-    width: 100%;
+.titleContainerSquare{
+    background-color: aqua;
+    width: 70%;
     display: flex;
-    justify-content: center;
-    font-size: 4vh;
-    top: -5vh;
-    left: 0px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.squareContentContainer{
+    width: 70%;
+    height: 70%;
+    background-color: plum;
+}
+
+.imgContainer{
+    width: 100%;
 }
 
 .albumCoverSquare{
-    width: 70%;
+    width: 100%;
+}
+
+.front{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    backface-visibility: hidden;
+    background: darkorange;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    /* height: 60vh; */
+    backface-visibility: hidden;
+    background:white;
+    color: var(--dark-color);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentSquare{
+    background-color: royalblue;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentSquare > .contentIcons4{
+    background-color: seagreen;
+    margin: auto;
+  
+}
+
+.albumCover{
+   height: 60vh;
+}
+
+.flipCard{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
