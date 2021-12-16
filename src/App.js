@@ -44,13 +44,15 @@ class App extends React.Component {
       {id: 1, 
       title: "about", 
       content: <div className={contentOrientationClasses}>
-        <p>
-          Vanna Oh! stepped onto the Pacific North West music scene in 2019. In less than a year she released a rock-and-roll EP, debuted a music video featured on Seattle’s Video BeBop, and toured the West Coast. Vanna Oh! became known for her powerful guitar hooks, dynamic vocals, theatrical stage presence, and message of women’s empowerment.
-        </p>
-        <break></break>
-        <p>
-          The COVID pandemic cancelled the rock-and-roll queen’s second West Coast tour and brought the full-time performer to a halt. During this time, she wrote heart-wrenching folk songs, produced and engineered a 4-song EP, and filmed a music video in Texas. She also wrestled with the ethical dilemma of spending all of her time and money on such self-aggrandizing ventures—wondering if it was the best way to help a world reeling from income inequality, racism, mental illness, addiction, and misogyny.
-        </p>
+        <div className="aboutDiv">
+          <p>
+            Vanna Oh! stepped onto the Pacific North West music scene in 2019. In less than a year she released a rock-and-roll EP, debuted a music video featured on Seattle’s Video BeBop, and toured the West Coast. Vanna Oh! became known for her powerful guitar hooks, dynamic vocals, theatrical stage presence, and message of women’s empowerment.
+          </p>
+          <break></break>
+          <p>
+            The COVID pandemic cancelled the rock-and-roll queen’s second West Coast tour and brought the full-time performer to a halt. During this time, she wrote heart-wrenching folk songs, produced and engineered a 4-song EP, and filmed a music video in Texas. She also wrestled with the ethical dilemma of spending all of her time and money on such self-aggrandizing ventures—wondering if it was the best way to help a world reeling from income inequality, racism, mental illness, addiction, and misogyny.
+          </p>
+        </div>
       </div>
        },
       { id: 2, 
@@ -81,15 +83,17 @@ class App extends React.Component {
       { id: 4, 
         title: "connect", 
         content: <div className={contentOrientationClasses}>
-          <a href="https://www.facebook.com/vannaohmusic/" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'facebook-square']} size="3x" />
-          </a>
-          <a href="https://www.instagram.com/vannaohno/" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'instagram']} size="3x" />
-          </a>
-          <a href="mailto:vannaohcontact@gmail.com" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={['far', 'envelope']} size="3x" />
-          </a>
+          <div className="socialDiv">
+            <a href="https://www.facebook.com/vannaohmusic/" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={['fab', 'facebook-square']} size="3x" />
+            </a>
+            <a href="https://www.instagram.com/vannaohno/" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={['fab', 'instagram']} size="3x" />
+            </a>
+            <a href="mailto:vannaohcontact@gmail.com" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={['far', 'envelope']} size="3x" />
+            </a>
+          </div>
         </div>},
     ] 
   }

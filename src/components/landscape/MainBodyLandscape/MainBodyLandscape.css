@@ -20,7 +20,7 @@
     justify-content: space-between;
   }
 
-.backButton{
+.backButtonLandscape{
     cursor: pointer;
 }
 
@@ -31,88 +31,128 @@
     width: 90%;
     height: 100%;
     justify-content: space-around;
-    align-items:center ;
-    
+    align-items:center ; 
 }
 
-.imgContainer{
+.imgContainerLandscape{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
     height: 100%;
-    /* box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6); */
     -webkit-transition: transform 0.6s;
     transform-style: preserve-3d;
     transition: all 0.5s;
     -webkit-transition: 0.5s;
-    
+   
 }
 
-.front{
+.frontLandscape{
     position: absolute;
     width: fit-content;
     height: fit-content;
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background: darkorange; */
-    
 }
 
-.back {
+.albumCoverLandscape{
+    width: 60vh;
+    max-width: 40vw;
+ }
+
+.backLandscape {
     position: absolute;
     width: 60vh;
     height: 60vh;
+    max-width: 40vw;
+    max-height: 40vw;
     backface-visibility: hidden;
-    background:white;
-    color: var(--dark-color);
+    background-color: var(--light-color);
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
-.albumCover{
-   height: 60vh;
+.contentLandscape{
+    /* background-color: springgreen; */
+    width: 60vh;
+    height: 60vh;
+    max-width: 40vw;
+    max-height: 40vw;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;  
 }
 
-.flipCard{
+.contentLandscape > .aboutDiv {
+    /* background-color: thistle; */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.contentLandscape > iframe{
+    margin: auto;
+    width: 90%;
+    height: 50%;
+}
+  .contentLandscape > .contentIcons4{
+    /* background-color: darkorchid; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .contentLandscape > .contentIcons4 > a{
+    width: 50%;
+  }
+  .contentLandscape > .contentIcons4 > a >img{
+    width: 100%;
+  }
+
+  .contentLandscape > .socialDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: yellow; */
+  }
+
+  .contentLandscape > .socialDiv > a{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentLandscape > .socialDiv > a >svg{
+    height: 100%;
+    max-height: 100px;
+  }
+
+.flipCardLandscape{
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
 }
 
-.hidden{
-    display: none;
-}
-
-@media only screen and (max-height: 500px ){
-    
-    /* .titleContainerLandscape{
-        font-size: .65rem;
-        top: -25px;
-    } */
-
-    .albumCover{
-        height: 60vh;
-        width: unset;
-    }
-}
-
-/* @media only screen and (max-height:400px){
-    .albumCover{
-        max-height: 200px;
-    }
-} */
 
 
 
 
-/* Galaxy fold landscape */
 
-@media only screen and (max-height: 300px), screen and (max-width: 700px ){
-    .albumCover{
-        max-height: 200px;
-        width: unset;
-    }
-  }
+
+
+
 

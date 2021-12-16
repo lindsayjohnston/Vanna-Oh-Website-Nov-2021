@@ -1,14 +1,17 @@
 .menuLandscape{
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 40%;
+    
     /* height: 20vh; */
     justify-content: space-between;
+    align-items: center;
+    
 }
 
-
-
 .buttonLandscape {
+    width: 60vh;
+    max-width: 40vw;
     display: inline-block;
     opacity: 70%;
     border: none;

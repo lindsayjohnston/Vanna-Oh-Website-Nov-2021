@@ -24,28 +24,8 @@
   padding: 5vh 5vw;
 }
 
-/* Styling for the content in each card based on orientation */
 
-.contentLandscape{
-  height: 50vh;
-  width: 50vh;
-  /* background-color: pink; */
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.contentLandscape > .contentIcons4{
-  /* background-color: darkorchid; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
 
 
 

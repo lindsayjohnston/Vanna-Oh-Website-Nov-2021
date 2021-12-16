@@ -3,13 +3,13 @@ import MenuLandscape from '../MenuLandscape/MenuLandscape';
 import albumCover from '../../../media/sad-mode-album-cover-1024x1024.jpg';
 
 const mainBodyLandscape = (props) => {
-    let imgContainerClasses= "imgContainer flipCard";
-    let backButtonClasses= "titleLandscape backButton";
+    let imgContainerClasses= "imgContainerLandscape flipCardLandscape";
+    let backButtonClasses= "titleLandscape backButtonLandscape";
     let contentOrLinks=null;
     
     if (props.pageShown === "home"){
         backButtonClasses += " hidden";
-        imgContainerClasses = "imgContainer";
+        imgContainerClasses = "imgContainerLandscape";
     } else {
         const pageIndex= props.pageShown - 1;
         const pageInfo= props.pages[pageIndex];
@@ -38,10 +38,10 @@ const mainBodyLandscape = (props) => {
                     pageShown={props.pageShown}
                     pages={props.pages} />
                 <div className={imgContainerClasses}>
-                    <div className="front">
-                        <img className="albumCover" alt="sad-mode-album-cover" src={albumCover}></img>
+                    <div className="frontLandscape">
+                        <img className="albumCoverLandscape" alt="sad-mode-album-cover" src={albumCover}></img>
                     </div>
-                    <div className="back">
+                    <div className="backLandscape">
                         {contentOrLinks}
                     </div>
                     
