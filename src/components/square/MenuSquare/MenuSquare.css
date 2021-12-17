@@ -1,12 +1,12 @@
 .menuSquare{
     display: flex;
     position: absolute;
-    bottom: -7vh;
+    bottom: -9vh;
     width: 100%;
-    height: 7vh;
+    height: 9vh;
     justify-content: space-around;
     align-items: flex-end;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
 .buttonSquare {
