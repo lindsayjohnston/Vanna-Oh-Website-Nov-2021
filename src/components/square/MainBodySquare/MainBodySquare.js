@@ -23,9 +23,7 @@ const mainBodySquare = (props) => {
     }
 
     return (
-        <div className='mainBodySquare'>
-            
-            
+        <div className='mainBodySquare'> 
             <div className="squareContentContainer">
                 <div className="titleContainerSquare">
                     <h1 className="titleSquare"> vanna oh! </h1>

@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.menuContainer {
+.menuContainerPortrait {
     display: flex;
     flex-direction: column;
     width: 50%;
