@@ -31,6 +31,10 @@
     cursor: pointer;
 }
 
+.backButtonSquare:hover{
+    color: var(--accent-color);
+}
+
 .imgContainerSquare{
     /* background-color: tomato; */
     width: 100%;
@@ -113,7 +117,11 @@
 }
 
 .contentSquare > .contentIcons4 > a >img{
-    width: 100%;
+    width: 80%;
+}
+
+.contentSquare > .contentIcons4 > a >img:hover{
+    width: 90%;
 }
 
 .contentSquare > .socialDiv{

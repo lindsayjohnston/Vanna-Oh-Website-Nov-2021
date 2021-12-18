@@ -1,13 +1,14 @@
 .mainBodyPortrait{
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     height: 100%;
     width: 100%;
+    
 }
 
 .contentContainerPortrait{
     width:100%;
     height: 100%;
-    background-color: skyblue;
+    /* background-color: skyblue; */
     position: relative;
 }
 
@@ -29,6 +30,14 @@
     font-size: 3vh;
 }
 
+.backButtonPortrait{
+    cursor: pointer;
+}
+
+.backButtonPortrait:hover{
+    color: var(--accent-color);
+}
+
 .cardContainerPortrait{
     width: 100%;
     height: 100%;
@@ -37,6 +46,7 @@
     transform-style: preserve-3d;
     transition: all 0.5s;
     -webkit-transition: 0.5s;
+    /* background-color:blue ; */
 }
 
 .frontPortrait{
@@ -44,7 +54,7 @@
     width:100%;
     height: 100%;
     backface-visibility: hidden;
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
 }
 
 .imgContainerPortrait{
@@ -66,14 +76,89 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background:white;
+    background:var(--main-color);
     color: var(--dark-color);
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border: 1px solid var(--main-color);
 }
+
+.contentPortrait{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.contentPortrait > .aboutDiv{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 5px;
+}
+
+.contentPortrait > iframe{
+    margin: auto;
+    width: 90%;
+    height: 50%;
+}
+
+.contentPortrait > .contentIcons4{
+    /* background-color: seagreen; */
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentPortrait > .contentIcons4 > a {
+    height: 25%;
+    /* background-color: springgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentPortrait > .contentIcons4 > a >img{
+    height: 80%;
+}
+
+.contentPortrait > .contentIcons4 > a >img:hover{
+    height: 90%;
+}
+
+.contentPortrait > .socialDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: yellow; */
+  }
+
+  .contentPortrait > .socialDiv > a{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentPortrait > .socialDiv > a >svg{
+    height: 100%;
+    max-height: 100px;
+  }
+
 
 .flipCardPortrait{
     transform: rotateY(180deg);
@@ -82,13 +167,13 @@
 
 
 @media only screen and (max-width: 500px){
-    .mainBodyPortrait{
+    .imgContainerPortrait{
         background-image: url("../../../media/sad-mode-art-mobile-488x947.jpg");
     }
 }
 
 @media only screen and (max-height: 775px){
-    .mainBodyPortrait{
+    .imgContainerPortrait{
         background-image: url("../../../media/sad-mode-background-tablet-1024x1366.jpg")
     }
 }

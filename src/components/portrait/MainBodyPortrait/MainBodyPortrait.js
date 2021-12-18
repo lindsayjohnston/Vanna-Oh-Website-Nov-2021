@@ -47,7 +47,7 @@ const mainBodyPortrait = (props) => {
             </div>
 
             <div className="backPortrait">
-              {contentOrLinks}
+                {contentOrLinks}
             </div>
 
           </div>
