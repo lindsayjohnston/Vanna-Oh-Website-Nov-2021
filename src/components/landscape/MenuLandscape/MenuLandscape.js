@@ -8,7 +8,6 @@ const menuLandscape = (props) =>{
         //generate all the buttons for the menu
        pagesButtons = pagesInfo.map((pageInfo) => 
         <button className="buttonLandscape" 
-            id={pageInfo.id} 
             key={pageInfo.id} 
             onClick={() => props.menuClick(pageInfo.id)}>
             {pageInfo.title}
@@ -20,7 +19,6 @@ const menuLandscape = (props) =>{
         pagesButtons = <button 
         disabled
         className="buttonLandscape noClick" 
-        id= {pageShown} 
         key= {pageShown} 
         onClick={() => props.menuClick({pageShown})}>
         {pageInfo.title}
