@@ -16,7 +16,7 @@
 
 .buttonPortrait {
     display: inline-block;
-    opacity: 70%;
+    opacity: 0.7;
     border: none;
     margin: .5vh;
     text-decoration: none;
