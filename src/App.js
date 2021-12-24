@@ -11,7 +11,6 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import{ faEnvelope } from '@fortawesome/free-regular-svg-icons';
-//fa email
 
 library.add(faFacebookSquare, faInstagram, faEnvelope);
 
@@ -22,17 +21,6 @@ let screenOrientation= null;
     //landscape= < .87
     //square = between
     //Portrait= > 1.6
-
-// if((window.visualViewport.height / window.visualViewport.width) < .87){
-//   screenOrientation= "landscape";
-//   // contentOrientationClasses="contentLandscape";
-// } else if ((window.visualViewport.height / window.visualViewport.width) > 1.6) {
-//   screenOrientation= "portrait";
-//   // contentOrientationClasses="contentPortrait";
-// } else {
-//   screenOrientation= "square";
-//   // contentOrientationClasses="contentSquare";
-// }
 
 if((window.innerHeight/ window.innerWidth) < .87){
   screenOrientation= "landscape";
@@ -151,7 +139,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.checkScreenOrientation)
+    window.addEventListener('resize', this.checkScreenOrientation);
+    window.addEventListener("orientationchange", this.checkScreenOrientation);
   }
 
   render() {
