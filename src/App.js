@@ -15,22 +15,18 @@ import{ faEnvelope } from '@fortawesome/free-regular-svg-icons';
 library.add(faFacebookSquare, faInstagram, faEnvelope);
 
 let screenOrientation= null;
-// let contentOrientationClasses= null;
 
- //Add in ratios height/width
+//Add in ratios height/width
     //landscape= < .87
     //square = between
     //Portrait= > 1.6
 
 if((window.innerHeight/ window.innerWidth) < .87){
   screenOrientation= "landscape";
-  // contentOrientationClasses="contentLandscape";
 } else if ((window.innerHeight/ window.innerWidth) > 1.6) {
   screenOrientation= "portrait";
-  // contentOrientationClasses="contentPortrait";
 } else {
   screenOrientation= "square";
-  // contentOrientationClasses="contentSquare";
 }
 
 class App extends React.Component {
@@ -128,34 +124,33 @@ class App extends React.Component {
     })
   }
 
-  //Orientation change functions for debugging on iOS safari
+  // //Orientation change functions for debugging on iOS safari
 
-  checkScreenOrientationChange = () => {
-    let newOrientation= null;
-    alert("in orientation change function");
+  // checkScreenOrientationChange = () => {
+  //   let newOrientation= null;
+  //   alert("in orientation change function");
 
-    if((window.innerHeight/ window.innerWidth) < .87){
-      newOrientation= "landscape";
-    } else if ((window.innerHeight / window.innerWidth) > 1.2) {
-      newOrientation= "portrait";
-    } else {
-      newOrientation= "square";
-    }
+  //   if((window.innerHeight/ window.innerWidth) < .87){
+  //     newOrientation= "landscape";
+  //   } else if ((window.innerHeight / window.innerWidth) > 1.2) {
+  //     newOrientation= "portrait";
+  //   } else {
+  //     newOrientation= "square";
+  //   }
 
-    if(newOrientation !== this.state.screenOrientation){
-      this.setScreenOrientationChange(newOrientation);
-    }
-  }
+  //   if(newOrientation !== this.state.screenOrientation){
+  //     this.setScreenOrientationChange(newOrientation);
+  //   }
+  // }
 
-  setScreenOrientationChange= (newOrientation)=>{
-    console.log("in set orientation after change function");
-    this.setState({
-      screenOrientation: newOrientation
-    })
-  }
+  // setScreenOrientationChange= (newOrientation)=>{
+  //   console.log("in set orientation after change function");
+  //   this.setState({
+  //     screenOrientation: newOrientation
+  //   })
+  // }
 
   pageShownHandler = (pageId) =>{
-    // alert("fired pageShownHandler in App.js. Id: " + pageId)
     this.setState ({
       pageShown : pageId
     })
@@ -169,7 +164,7 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.checkScreenOrientation);
-    window.addEventListener("orientationchange", this.checkScreenOrientationChange);
+    window.addEventListener("orientationchange", this.checkScreenOrientation);
   }
 
   render() {
