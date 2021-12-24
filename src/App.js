@@ -23,10 +23,21 @@ let screenOrientation= null;
     //square = between
     //Portrait= > 1.6
 
-if((window.visualViewport.height / window.visualViewport.width) < .87){
+// if((window.visualViewport.height / window.visualViewport.width) < .87){
+//   screenOrientation= "landscape";
+//   // contentOrientationClasses="contentLandscape";
+// } else if ((window.visualViewport.height / window.visualViewport.width) > 1.6) {
+//   screenOrientation= "portrait";
+//   // contentOrientationClasses="contentPortrait";
+// } else {
+//   screenOrientation= "square";
+//   // contentOrientationClasses="contentSquare";
+// }
+
+if((window.innerHeight/ window.innerWidth) < .87){
   screenOrientation= "landscape";
   // contentOrientationClasses="contentLandscape";
-} else if ((window.visualViewport.height / window.visualViewport.width) > 1.6) {
+} else if ((window.innerHeight/ window.innerWidth) > 1.6) {
   screenOrientation= "portrait";
   // contentOrientationClasses="contentPortrait";
 } else {
@@ -107,7 +118,7 @@ class App extends React.Component {
   checkScreenOrientation = () => {
     let newOrientation= null;
 
-    if((window.visualViewport.height / window.visualViewport.width) < .87){
+    if((window.innerHeight/ window.visualViewport.width) < .87){
       newOrientation= "landscape";
     } else if ((window.visualViewport.height / window.visualViewport.width) > 1.2) {
       newOrientation= "portrait";
