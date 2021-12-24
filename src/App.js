@@ -97,9 +97,6 @@ class App extends React.Component {
     this.checkScreenOrientation = this.checkScreenOrientation.bind(this);
     this.setScreenOrientation = this.setScreenOrientation.bind(this);
     this.pageShownHandler.bind(this);
-    // this.checkScreenOrientationChange= this.checkScreenOrientationChange.bind(this);
-    // this.setScreenOrientationChange = this.setScreenOrientationChange.bind(this);
-
   }
 
   checkScreenOrientation = () => {
@@ -123,32 +120,6 @@ class App extends React.Component {
       screenOrientation: newOrientation
     })
   }
-
-  // //Orientation change functions for debugging on iOS safari
-
-  // checkScreenOrientationChange = () => {
-  //   let newOrientation= null;
-  //   alert("in orientation change function");
-
-  //   if((window.innerHeight/ window.innerWidth) < .87){
-  //     newOrientation= "landscape";
-  //   } else if ((window.innerHeight / window.innerWidth) > 1.2) {
-  //     newOrientation= "portrait";
-  //   } else {
-  //     newOrientation= "square";
-  //   }
-
-  //   if(newOrientation !== this.state.screenOrientation){
-  //     this.setScreenOrientationChange(newOrientation);
-  //   }
-  // }
-
-  // setScreenOrientationChange= (newOrientation)=>{
-  //   console.log("in set orientation after change function");
-  //   this.setState({
-  //     screenOrientation: newOrientation
-  //   })
-  // }
 
   pageShownHandler = (pageId) =>{
     this.setState ({
