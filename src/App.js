@@ -16,8 +16,7 @@ import{ faEnvelope } from '@fortawesome/free-regular-svg-icons';
 library.add(faFacebookSquare, faInstagram, faEnvelope);
 
 let screenOrientation= null;
-let contentOrientationClasses= null;
-
+// let contentOrientationClasses= null;
 
  //Add in ratios height/width
     //landscape= < .87
@@ -26,13 +25,13 @@ let contentOrientationClasses= null;
 
 if((window.visualViewport.height / window.visualViewport.width) < .87){
   screenOrientation= "landscape";
-  contentOrientationClasses="contentLandscape";
+  // contentOrientationClasses="contentLandscape";
 } else if ((window.visualViewport.height / window.visualViewport.width) > 1.6) {
   screenOrientation= "portrait";
-  contentOrientationClasses="contentPortrait";
+  // contentOrientationClasses="contentPortrait";
 } else {
   screenOrientation= "square";
-  contentOrientationClasses="contentSquare";
+  // contentOrientationClasses="contentSquare";
 }
 
 class App extends React.Component {
@@ -43,7 +42,7 @@ class App extends React.Component {
     pages:  [ 
       {id: 1, 
       title: "about", 
-      content: <div className={contentOrientationClasses}>
+      content: <div className="contentDiv">
         <div className="aboutDiv">
           <p>
             Vanna Oh! stepped onto the Pacific North West music scene in 2019. In less than a year she released a rock-and-roll EP, debuted a music video featured on Seattle’s Video BeBop, and toured the West Coast. Vanna Oh! became known for her powerful guitar hooks, dynamic vocals, theatrical stage presence, and message of women’s empowerment.
@@ -57,13 +56,13 @@ class App extends React.Component {
        },
       { id: 2, 
         title: "music", 
-        content: <div className={contentOrientationClasses}>
+        content: <div className="contentDiv">
              <iframe  src="https://www.youtube.com/embed/Hphz0jDpxGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       },
       { id: 3, 
         title: "merch", 
-        content: <div className={contentOrientationClasses}>
+        content: <div className="contentDiv">
           <div className="contentIcons4">
             <a target="_blank" rel="noreferrer" href="https://vannaoh.bandcamp.com/merch/limited-edition-chaperone-ringer-tee">
               <img src={ringerShirtThumbnail} alt="ringer-shirt-thumbnail"></img>
@@ -82,7 +81,7 @@ class App extends React.Component {
       },
       { id: 4, 
         title: "connect", 
-        content: <div className={contentOrientationClasses}>
+        content: <div className="contentDiv">
           <div className="socialDiv">
             <a href="https://www.facebook.com/vannaohmusic/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={['fab', 'facebook-square']} size="3x" />
@@ -153,20 +152,23 @@ class App extends React.Component {
       appBody = <MainBodyLandscape 
                   backButtonHandler= {this.backButtonHandler}
                   menuClick = {this.pageShownHandler}
-                  pageShown= {this.state.pageShown} pages={this.state.pages} />;
+                  pageShown= {this.state.pageShown} 
+                  pages={this.state.pages} />;
       appClasses= "appLandscape";
     } else if (this.state.screenOrientation === "portrait"){
       appBody = <MainBodyPortrait 
                   backButtonHandler= {this.backButtonHandler}
                   menuClick = {this.pageShownHandler}
-                  pageShown= {this.state.pageShown} pages={this.state.pages}
+                  pageShown= {this.state.pageShown} 
+                  pages={this.state.pages}
                 />;
       appClasses= "appPortrait";
     } else {
       appBody= <MainBodySquare 
                   backButtonHandler= {this.backButtonHandler}
                   menuClick = {this.pageShownHandler}
-                  pageShown= {this.state.pageShown} pages={this.state.pages} 
+                  pageShown= {this.state.pageShown} 
+                  pages={this.state.pages} 
                     />;
       appClasses="appSquare";
     }

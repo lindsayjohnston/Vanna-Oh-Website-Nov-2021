@@ -83,7 +83,7 @@
     padding: 10px;
 }
 
-.contentLandscape{
+.backLandscape > .contentDiv{
     /* background-color: springgreen; */
     width: 60vh;
     height: 60vh;
@@ -96,18 +96,18 @@
     align-items: center;  
 }
 
-.contentLandscape > .aboutDiv {
+.backLandscape > .contentDiv > .aboutDiv {
     /* background-color: thistle; */
     max-width: 100%;
     max-height: 100%;
 }
 
-.contentLandscape > iframe{
+.backLandscape > .contentDiv > iframe{
     margin: auto;
     width: 90%;
     height: 50%;
 }
-  .contentLandscape > .contentIcons4{
+  .backLandscape > .contentDiv > .contentIcons4{
     /* background-color: darkorchid; */
     display: flex;
     flex-wrap: wrap;
@@ -117,18 +117,18 @@
     width: 100%;
   }
 
-  .contentLandscape > .contentIcons4 > a{
+  .backLandscape > .contentDiv > .contentIcons4 > a{
     width: 50%;
   }
-  .contentLandscape > .contentIcons4 > a >img{
+  .backLandscape > .contentDiv > .contentIcons4 > a >img{
     width: 80%;
   }
 
-  .contentLandscape > .contentIcons4 > a >img{
+  .backLandscape > .contentDiv > .contentIcons4 > a >img{
     width: 90%;
   }
 
-  .contentLandscape > .socialDiv{
+  .backLandscape > .contentDiv > .socialDiv{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -139,13 +139,13 @@
     /* background-color: yellow; */
   }
 
-  .contentLandscape > .socialDiv > a{
+  .backLandscape > .contentDiv > .socialDiv > a{
     height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .contentLandscape > .socialDiv > a >svg{
+  .backLandscape > .contentDiv > .socialDiv > a >svg{
     height: 100%;
     max-height: 100px;
   }
