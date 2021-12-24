@@ -12,8 +12,8 @@
 
 .appPortrait{
   /* background-color: coral; */
-  height: 70vh;
-  padding: 15vh 15vw;
+  height: 80vh;
+  padding: 5vh 10vw 15vh 10vw;
   min-width: 240px;
 }
 
