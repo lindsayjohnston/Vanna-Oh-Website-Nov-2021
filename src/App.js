@@ -109,9 +109,9 @@ class App extends React.Component {
   checkScreenOrientation = () => {
     let newOrientation= null;
 
-    if((window.innerHeight/ window.visualViewport.width) < .87){
+    if((window.innerHeight/ window.innerWidth) < .87){
       newOrientation= "landscape";
-    } else if ((window.visualViewport.height / window.visualViewport.width) > 1.2) {
+    } else if ((window.innerHeight / window.innerWidth) > 1.2) {
       newOrientation= "portrait";
     } else {
       newOrientation= "square";
@@ -134,9 +134,9 @@ class App extends React.Component {
     let newOrientation= null;
     alert("in orientation change function");
 
-    if((window.innerHeight/ window.visualViewport.width) < .87){
+    if((window.innerHeight/ window.innerWidth) < .87){
       newOrientation= "landscape";
-    } else if ((window.visualViewport.height / window.visualViewport.width) > 1.2) {
+    } else if ((window.innerHeight / window.innerWidth) > 1.2) {
       newOrientation= "portrait";
     } else {
       newOrientation= "square";
