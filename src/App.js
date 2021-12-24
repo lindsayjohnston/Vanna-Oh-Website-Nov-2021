@@ -16,7 +16,7 @@ library.add(faFacebookSquare, faInstagram, faEnvelope);
 
 let screenOrientation= null;
 
-//Add in ratios height/width
+//Screen ratios height/width
     //landscape= < .87
     //square = between
     //Portrait= > 1.6
@@ -97,8 +97,8 @@ class App extends React.Component {
     this.checkScreenOrientation = this.checkScreenOrientation.bind(this);
     this.setScreenOrientation = this.setScreenOrientation.bind(this);
     this.pageShownHandler.bind(this);
-    this.checkScreenOrientationChange= this.checkScreenOrientationChange.bind(this);
-    this.setScreenOrientationChange = this.setScreenOrientationChange.bind(this);
+    // this.checkScreenOrientationChange= this.checkScreenOrientationChange.bind(this);
+    // this.setScreenOrientationChange = this.setScreenOrientationChange.bind(this);
 
   }
 
@@ -168,7 +168,6 @@ class App extends React.Component {
   }
 
   render() {
-    
     let appBody = null;
     let appClasses= "";
  
@@ -196,7 +195,6 @@ class App extends React.Component {
                     />;
       appClasses="appSquare";
     }
-
 
     return (
       <div className={appClasses}>
