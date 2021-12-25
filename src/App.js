@@ -29,6 +29,8 @@ if((window.innerHeight/ window.innerWidth) < .87){
   screenOrientation= "square";
 }
 
+//Test for AWS
+
 class App extends React.Component {
   
   state = {
