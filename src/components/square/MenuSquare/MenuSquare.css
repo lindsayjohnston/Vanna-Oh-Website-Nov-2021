@@ -42,3 +42,9 @@
   .buttonSquare:active {
     transform: scale(0.99);
   }
+
+  .buttonSquare:disabled {
+    background: var(--main-color);
+    color: var(--dark-color);
+    cursor: unset;
+  }

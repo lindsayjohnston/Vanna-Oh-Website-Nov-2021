@@ -18,7 +18,7 @@ const menuLandscape = (props) =>{
         let pageInfo= props.pages[(pageShown - 1)];
         pagesButtons = <button 
         disabled
-        className="buttonLandscape noClick" 
+        className="buttonLandscape" 
         key= {pageShown} 
         onClick={() => props.menuClick({pageShown})}>
         {pageInfo.title}

@@ -124,7 +124,7 @@
     width: 80%;
   }
 
-  .backLandscape > .contentDiv > .contentIcons4 > a >img{
+  .backLandscape > .contentDiv > .contentIcons4 > a >img:hover{
     width: 90%;
   }
 

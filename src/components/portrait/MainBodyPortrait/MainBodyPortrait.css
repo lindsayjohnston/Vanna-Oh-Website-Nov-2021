@@ -57,10 +57,10 @@
 }
 
 .imgContainerPortrait{
-    background-image: url("../../../media/sad-mode-background-tablet-1024x1366.jpg") ; 
+    background-image: url("../../../media/sad-mode-album-cover-1024x1024.jpg") ; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -10vw 0;
+    background-position: -125px 0;
     height: 100%;
     width: 100%;
     /* margin: 10vh 5vw; */
@@ -166,10 +166,10 @@
 }
 
 
-@media only screen and (max-width: 500px){
+/* @media only screen and (min-width: 500px){
     .imgContainerPortrait{
         background-image: url("../../../media/sad-mode-art-mobile-488x947.jpg");
-        background-position: -10px 0px;
+        background-position: -30px 0px;
     }
 }
 
@@ -177,4 +177,4 @@
     .imgContainerPortrait{
         background-image: url("../../../media/sad-mode-background-tablet-1024x1366.jpg")
     }
-}
+} */

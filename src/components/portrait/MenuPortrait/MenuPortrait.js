@@ -19,7 +19,7 @@ const menuPortrait = (props) => {
         let pageInfo= props.pages[(pageShown - 1)];
         pagesButtons = <button 
         disabled
-        className="buttonPortrait noClick" 
+        className="buttonPortrait" 
         id= {pageShown} 
         key= {pageShown} 
         onClick={() => props.menuClick({pageShown})}>
