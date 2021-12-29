@@ -57,10 +57,10 @@
 }
 
 .imgContainerPortrait{
-    background-image: url("../../../media/sad-mode-album-cover-1024x1024.jpg") ; 
+    background-image: url("../../../media/sad-mode-album-cover-for-mobile-639x1015.jpeg") ; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -125px 0;
+    /* background-position: -125px 0; */
     height: 100%;
     width: 100%;
     /* margin: 10vh 5vw; */
