@@ -9,11 +9,17 @@
    
 }
 
-.menuContainerPortrait {
+.menuContainerPortrait  {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
+
+.shownPageTitle {
+  background-color: aquamarine ;
+}
+
+ 
 
 .fadeIn{
   animation-name: FadeIn;

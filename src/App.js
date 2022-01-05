@@ -133,11 +133,8 @@ class App extends React.Component {
   backButtonHandler = () =>{   
     this.setState({
       pageShown: "home"
-    })
-
-    
+    }) 
   }
-
 
   componentDidMount() {
     window.addEventListener('resize', this.checkScreenOrientation);

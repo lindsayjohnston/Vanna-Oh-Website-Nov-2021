@@ -1,47 +1,41 @@
 import "./MenuPortrait.css";
 
+
 const menuPortrait = (props) => {
     const pagesInfo= props.pages;
-    let pageShown= props.pageShown;
+    const pageShown= props.pageShown;
     let pagesButtons= null;
-    let menuContainerClasses= null;
-    let pageTitleContainerClasses= null;
+    let menu= null;
+
     if(props.pageShown === "home"){
-        menuContainerClasses = "menuContainerPortrait fadeIn"
-        pageTitleContainerClasses ="hidden"
-        //generate all the buttons for the menu
        pagesButtons = pagesInfo.map((pageInfo) => 
         <button className="buttonPortrait" 
             id={pageInfo.id} 
             key={pageInfo.id} 
             onClick={() => props.menuClick(pageInfo.id)}>
             {pageInfo.title}
-        </button>
-    );
+        </button>);
+
+        menu= <div key= {Math.random()} className= "menuContainerPortrait fadeIn">{pagesButtons}</div>;
+   
     } else {
         //generate one disabled 'button' for the "pageShown"
-        menuContainerClasses= "hidden";
-        pageTitleContainerClasses ="menuContainerPortrait fadeIn"
         let pageInfo= props.pages[(pageShown - 1)];
-        pagesButtons = <button 
-        disabled
-        className="buttonPortrait" 
-        id= {pageShown} 
-        key= {pageShown} 
-        onClick={() => props.menuClick({pageShown})}>
-        {pageInfo.title}
-    </button>
+        pagesButtons = <button
+            disabled
+            className="buttonPortrait"
+            id={pageShown}
+            key={pageShown}
+            onClick={() => props.menuClick({ pageShown })}>
+            {pageInfo.title}
+        </button>
+        menu= <div key= {Math.random()} className= "menuContainerPortrait fadeIn">{pagesButtons}</div>
     }
     
     
     return (
         <div className="menuPortrait">
-            <div className={menuContainerClasses}>
-                {pagesButtons}
-            </div>
-            <div className={pageTitleContainerClasses}>
-                <button disabled className="buttonPortrait">{pagesButtons}</button>
-            </div>
+            {menu}
         </div>
     )
 }
