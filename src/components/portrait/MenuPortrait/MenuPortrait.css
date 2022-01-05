@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    opacity: 0;
     animation-name: FadeIn;
     animation-delay: 2s;
     animation-duration: 3s;
