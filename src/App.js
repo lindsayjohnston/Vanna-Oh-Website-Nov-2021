@@ -3,6 +3,7 @@ import './App.css';
 import MainBodyLandscape from "./components/landscape/MainBodyLandscape/MainBodyLandscape.js";
 import MainBodyPortrait from './components/portrait/MainBodyPortrait/MainBodyPortrait';
 import MainBodySquare from './components/square/MainBodySquare/MainBodySquare';
+import Footer from './components/footer/footer';
 import ringerShirtThumbnail from '../src/media/merchThumbnails/ringer-shirt-thumbnail.jpg';
 import blackShirtThumbnail from '../src/media/merchThumbnails/black-shirt-thumbnail.jpg';
 import undiesThumbnail from '../src/media/merchThumbnails/undies-thumbnail.jpg';
@@ -172,6 +173,7 @@ class App extends React.Component {
     return (
       <div className={appClasses}>
         {appBody}
+        <Footer />
       </div>
     )
   }

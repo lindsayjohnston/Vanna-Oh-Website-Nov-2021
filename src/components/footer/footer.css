@@ -1,0 +1,32 @@
+.footer {
+    position: absolute; 
+}
+
+.footer > p{
+    width: 100%;
+    /* background-color: greenyellow; */
+    text-align: center;
+}
+
+.appLandscape > .footer{
+    /* background-color: aqua; */
+    bottom: -2vh;
+    font-size: 3vh;
+  }
+
+
+  
+  .appSquare > .footer{
+    /* background-color: aqua; */
+    font-size: 2vh;
+    bottom: -2vh;
+    width: 90vw;
+    text-align: center;
+  }
+  
+  .appPortrait > .footer{
+    /* background-color: aqua; */
+    position: static;
+    margin-top: 3.5vh;
+    font-size: 2vh;
+  }
