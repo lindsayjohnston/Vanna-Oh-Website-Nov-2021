@@ -20,8 +20,7 @@ const menuPortrait = (props) => {
     );
     } else {
         //generate one disabled 'button' for the "pageShown"
-        // menuContainerClasses= "hidden";
-        menuContainerClasses= "fadeOut";
+        menuContainerClasses= "hidden";
         // pageTitleContainerClasses ="menuContainerPortrait fadeIn"
         let pageInfo= props.pages[(pageShown - 1)];
         pagesButtons = <button 
