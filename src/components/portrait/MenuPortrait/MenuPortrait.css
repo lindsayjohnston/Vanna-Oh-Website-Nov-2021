@@ -1,5 +1,4 @@
 .menuPortrait{
-    /* background-color: salmon; */
     position: absolute;
     bottom: 5vh;
     width:100%;
@@ -7,12 +6,23 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
+   
 }
 
 .menuContainerPortrait {
     display: flex;
     flex-direction: column;
     width: 50%;
+    animation-name: FadeIn;
+    animation-duration: 3s;
+    transition-timing-function: linear;
+}
+
+@keyframes FadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {opacity: 1};
 }
 
 .buttonPortrait {

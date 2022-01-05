@@ -130,16 +130,20 @@ class App extends React.Component {
     })
   }
 
-  backButtonHandler = () =>{
+  backButtonHandler = () =>{   
     this.setState({
       pageShown: "home"
     })
+
+    
   }
+
 
   componentDidMount() {
     window.addEventListener('resize', this.checkScreenOrientation);
     window.addEventListener("orientationchange", this.checkScreenOrientation);
   }
+
 
   render() {
     let appBody = null;
