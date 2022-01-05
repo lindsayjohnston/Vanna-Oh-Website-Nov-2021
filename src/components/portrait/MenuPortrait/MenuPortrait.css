@@ -13,9 +13,12 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    animation-name: FadeIn;
-    animation-duration: 6s;
-    transition-timing-function: linear;
+}
+
+.fadeIn{
+  animation-name: FadeIn;
+  animation-duration: 4s;
+  transition-timing-function: linear;
 }
 
 @keyframes FadeIn {
@@ -73,6 +76,70 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.fadeOut{
+  animation-name: FadeOut;
+  animation-duration: 4s;
+  transition-timing-function: linear;
+}
+
+@keyframes FadeOut {
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity:1;
+  }
+  100% {opacity: 0};
+}
+
+@-moz-keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  25%{
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  25%{
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  25%{
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  25%{
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
