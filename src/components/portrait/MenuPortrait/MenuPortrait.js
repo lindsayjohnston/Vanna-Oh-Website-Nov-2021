@@ -4,11 +4,11 @@ const menuPortrait = (props) => {
     const pagesInfo= props.pages;
     let pageShown= props.pageShown;
     let pagesButtons= null;
-    let menuContainerClasses= "hidden";
-    let pageTitleContainerClasses="hidden";
+    let menuContainerClasses= null;
+    let pageTitleContainerClasses= null;
     if(props.pageShown === "home"){
-        setTimeout( () => menuContainerClasses = "menuContainerPortrait fadeIn", 1000);
-        // pageTitleContainerClasses ="hidden fadeOut"
+        menuContainerClasses = "menuPortraitContainer fadeIn"
+        pageTitleContainerClasses ="hidden"
         //generate all the buttons for the menu
        pagesButtons = pagesInfo.map((pageInfo) => 
         <button className="buttonPortrait" 
@@ -21,7 +21,7 @@ const menuPortrait = (props) => {
     } else {
         //generate one disabled 'button' for the "pageShown"
         menuContainerClasses= "hidden";
-        // pageTitleContainerClasses ="menuContainerPortrait fadeIn"
+        pageTitleContainerClasses ="menuContainerPortrait fadeIn"
         let pageInfo= props.pages[(pageShown - 1)];
         pagesButtons = <button 
         disabled
