@@ -7,7 +7,7 @@ const menuPortrait = (props) => {
     let menuContainerClasses= null;
     let pageTitleContainerClasses= null;
     if(props.pageShown === "home"){
-        menuContainerClasses = "menuPortraitContainer fadeIn"
+        menuContainerClasses = "menuContainerPortrait fadeIn"
         pageTitleContainerClasses ="hidden"
         //generate all the buttons for the menu
        pagesButtons = pagesInfo.map((pageInfo) => 
