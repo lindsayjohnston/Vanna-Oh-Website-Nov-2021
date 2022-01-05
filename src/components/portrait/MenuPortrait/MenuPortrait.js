@@ -19,7 +19,7 @@ const menuPortrait = (props) => {
     } else {
         //generate one disabled 'button' for the "pageShown"
         menuContainerClasses= "hidden";
-        pageTitleContainerClasses = "menuContainerClasses"
+        pageTitleContainerClasses = "menuContainerPortrait"
         let pageInfo= props.pages[(pageShown - 1)];
         pagesButtons = <button 
         disabled
