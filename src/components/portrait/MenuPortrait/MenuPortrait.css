@@ -13,10 +13,8 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    opacity: 0;
     animation-name: FadeIn;
-    animation-delay: 2s;
-    animation-duration: 3s;
+    animation-duration: 6s;
     transition-timing-function: linear;
 }
 
@@ -24,12 +22,18 @@
   0%{
     opacity: 0;
   }
+  50%{
+    opacity:0;
+  }
   100% {opacity: 1};
 }
 
 @-moz-keyframes FadeIn {
   0% {
     opacity: 0;
+  }
+  50%{
+    opacity:0;
   }
   100% {
     opacity: 1;
@@ -40,6 +44,9 @@
   0% {
     opacity: 0;
   }
+  50%{
+    opacity:0;
+  }
   100% {
     opacity: 1;
   }
@@ -49,6 +56,9 @@
   0% {
     opacity: 0;
   }
+  50%{
+    opacity:0;
+  }
   100% {
     opacity: 1;
   }
@@ -57,6 +67,9 @@
 @-ms-keyframes FadeIn {
   0% {
     opacity: 0;
+  }
+  50%{
+    opacity:0;
   }
   100% {
     opacity: 1;
